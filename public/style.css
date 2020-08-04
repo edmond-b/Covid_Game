@@ -86,6 +86,10 @@ height: 300px;
   height: 100px;
 }
 
+#submitScore {
+  visibility: hidden;
+}
+
 
 /* #keyboard {
   flex: 1;

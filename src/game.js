@@ -32,6 +32,12 @@ export default class Game {
     if (this.gameOver){
       this.sfx.stayAtHome.play()
       ctx.fillText("Game Over", this.game_width / 2, this.game_height - 600);
+      var score = document.getElementById("score")
+      score.innerHTML = Score.distance
+      setTimeout(function(){
+        document.getElementById("gameScreen").setAttribute("style", "display:none")
+        document.getElementById("submitScore").setAttribute("style", "visibility:visible") 
+      }, 3000);
     } else if (this.paused){
       ctx.fillText("Paused", this.game_width / 2, this.game_height - 600);
     } else if (this.paused === false){

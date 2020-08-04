@@ -107,4 +107,4 @@ var play = new SFX(hero, input)
     refresh()
     window.requestAnimationFrame(loop);
   }
-}
+} 

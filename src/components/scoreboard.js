@@ -9,7 +9,7 @@ class ScoreboardDisplay extends React.Component {
   };
 
   componentDidMount(){
-    this.fetchData('http://localhost:3000/')
+    this.fetchData('http://localhost:3001/')
   }
 
   fetchData = (apiToFetch) => {
@@ -24,7 +24,7 @@ class ScoreboardDisplay extends React.Component {
 
   display = () => {
     var displayInfo = []
-  
+
     var sorted = this.getPostsSortedByNewest()
     if(sorted === undefined){
       console.log("")
@@ -37,36 +37,36 @@ class ScoreboardDisplay extends React.Component {
       });
     }
 
-    return displayInfo 
+    return displayInfo
 
   }
-  
+
   getPostsSortedByNewest() {
     for(var i = 0; i < this.state.scoreboard.length; i++){
       if(this.state.scoreboard[i].score > 1){
          return this.state.scoreboard.sort(function(postA, postB) {
           var dateA = postA.score
           var dateB = postB.score
-          return dateB - dateA 
+          return dateB - dateA
         })
       }
-    }  
+    }
   }
 
-  
+
   render(){
     return(
     <div id="scoreboard">
       <center><h1>ScoreBoard</h1>
       {this.display().map((score, index) => {
         return (
-         
+
           <p>{index + 1}. {score} </p>
         )
       })
     }
       </center>
-      
+
     </div>
     )
   }
@@ -75,4 +75,3 @@ class ScoreboardDisplay extends React.Component {
 }
 
 export default ScoreboardDisplay
-
