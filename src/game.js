@@ -15,12 +15,12 @@ export default class Game {
 
   draw(ctx){
     if(Score.infectionRate >= 1 || this.hero.position.y === 730){
-    this.gameOver = true
-  }else if (this.input.paused === true){
-    this.paused = true;
-  } else {this.paused = false}
-  this.gameStateText(ctx);
-  }
+      this.gameOver = true
+    }else if (this.input.paused === true){
+      this.paused = true;
+    } else {this.paused = false}
+      this.gameStateText(ctx);
+    }
 
   gameStateText(ctx){
     ctx.rect(0, 0, this.gameWidth, this.gameHeight);

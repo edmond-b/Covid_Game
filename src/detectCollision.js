@@ -60,8 +60,11 @@ export default class DetectCollision{
           if(passerByPosition.toString() !== greyColor.toString()) {passerby.fallSpeed = 7  }
         }
       }
+<<<<<<< HEAD
+=======
 
       this._heroHit();
+>>>>>>> master
     }
 
 

@@ -56,7 +56,7 @@ if (canvas != null){
 // platforms.push(new Platform('./assets/grass_4x1.png', 600, 200, 100, 200, -0.2))
 // platforms.push(new Platform('./assets/grass_4x1.png', 200, 600, 100, 200, -0.2))
 
-var spawnObjects = new SpawnObjects(hero)
+var spawnObjects = new SpawnObjects()
 spawnObjects.spawn()
 // objects = {hero: hero, platforms: platforms}
 // var detectCollision = new DetectCollision(objects);
